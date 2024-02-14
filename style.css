@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap');
+
+* {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #131713;
+}
+
+.container {
+  position: relative;
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: initial;
+}
+
+#canvas {
+  border: 2px solid grey;
+  box-shadow: 0 0 10px rgb(91, 199, 223);
+}
+span.score {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  font-size: 40px;
+}
+
+.container .menu {
+  border: 2px solid white;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 8px;
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.characters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.menu p {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: blink 1s infinite;
+}
+#canvas-1, #canvas-2 {
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#canvas-1:hover, #canvas-2:hover {
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
